@@ -1,0 +1,16 @@
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #40A4C8;
+    border-bottom: 1px solid black;
+}
+
+a:active {
+    background-color: rgba(226, 187, 11, 0.993);
+}
+
+a {
+    margin: 8px;
+}
