@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from './utility/Carousel';
+import './App.css';
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
     <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/New_York_City-04.jpg"></img>,
     ];
     return (
-      <div >
+      <div className="gallery">
         <Carousel imgFiles={name} />
       </div>
     );
