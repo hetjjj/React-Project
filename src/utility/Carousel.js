@@ -11,22 +11,24 @@ class Carousel extends Component {
 
     onLeftClick() {
         let length = this.props.imgFiles.length;
+        let horizontalMove = this.props.horizontalMove;
         this.setState(state => {
             return {
                 index: state.index - 1 >= 0 ? state.index - 1 : length - 1,
-                move: state.move + 840,
-                style: { transform: `translateX(${state.move + 840}px)` }
+                move: state.move + horizontalMove,
+                style: { transform: `translateX(${state.move + horizontalMove}px)` }
             }
         })
     }
 
     onRightClick() {
         let length = this.props.imgFiles.length;
+        let horizontalMove = this.props.horizontalMove
         this.setState(state => {
             return {
                 index: state.index + 1 < length ? state.index + 1 : 0,
-                move: state.move - 840,
-                style: { transform: `translateX(${state.move - 840}px)` }
+                move: state.move - horizontalMove,
+                style: { transform: `translateX(${state.move - horizontalMove}px)` }
             }
         })
     }

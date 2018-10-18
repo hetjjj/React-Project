@@ -1,4 +1,5 @@
 .Carousel {
+    position: relative;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
     width: 885px; 
@@ -15,7 +16,7 @@ button {
 }
 
 .rightArrow {
-    left: 92%;
+    left: 845px;
 }
 
 .notVisible {

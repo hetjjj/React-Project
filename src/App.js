@@ -11,7 +11,7 @@ class App extends Component {
     ];
     return (
       <div className="gallery">
-        <Carousel imgFiles={name} />
+        <Carousel imgFiles={name} horizontalMove={840}/>
       </div>
     );
   }
