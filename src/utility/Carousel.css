@@ -1,0 +1,39 @@
+.Carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    display: inline-block;
+    color: #949494;
+    border: 0;
+    font-size: 44px;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+li.isDisabled {
+    display: none;
+}
+
+
+.leftArrow:before {
+    content: "<";
+}
+
+.rightArrow:after {
+    content: ">";
+}
+
+img {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 755px;
+    height: 455px;
+}
+
