@@ -1,22 +1,27 @@
-.Carousel {
+.carousel {
     position: relative;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
-    width: 885px; 
+    width: 985px; 
+    padding-right: 30px;
 }
 
-button {
+.carousel button {
     z-index: 1;
     position: absolute;
-    top: 275px;
+    top: 225px;
     color: #949494;
     border: 0;
     font-size: 44px;
     cursor: pointer;
 }
 
+.leftArrow {
+    left: 45px;
+}
+
 .rightArrow {
-    left: 845px;
+    left: 928px;
 }
 
 .notVisible {
@@ -31,19 +36,20 @@ button {
     content: ">";
 }
 
-ul {
+.carousel ul {
     transition: transform 0.4s ease-out;
-    width: 3360px;
+    width: 5750px;
 }
 
-li {
+.carousel li {
     list-style-type: none;
     display: inline-block; 
-    padding: 35px;
+    margin-right: 70px;
 }
 
-img {
-    width: 765px;
-    height: 490px;
+.carousel img {
+    box-shadow: 5px 10px 15px grey;
+    width: 925px;
+    height: 425px;
 }
 

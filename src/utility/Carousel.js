@@ -35,7 +35,7 @@ class Carousel extends Component {
 
     renderImages() {
         return this.props.imgFiles.map((ele) => {
-            return (<li key={`${ele.props.src}`}>{ele}</li>)
+            return (<li key={`${ele.props.children.props.src}`}>{ele}</li>)
         })
     }
 
@@ -44,7 +44,7 @@ class Carousel extends Component {
         let displayLeftButton = this.state.index - 1 >= 0;
         let displayRightButton = this.state.index + 1 < length;
         return (
-            <div className="Carousel">
+            <div className="carousel">
                 <button onClick={this.onLeftClick} className={displayLeftButton ? "leftArrow" : "notVisible"}></button>
                 <ul style={this.state.style}>
                     {this.renderImages()}
