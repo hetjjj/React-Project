@@ -16,7 +16,7 @@ class Carousel extends Component {
             return {
                 index: state.index - 1 >= 0 ? state.index - 1 : length - 1,
                 move: state.move + horizontalMove,
-                style: { transform: `translateX(${state.move + horizontalMove}px)` }
+                style: { transform: `translateX(${state.move + horizontalMove}%)` }
             }
         })
     }
@@ -28,7 +28,7 @@ class Carousel extends Component {
             return {
                 index: state.index + 1 < length ? state.index + 1 : 0,
                 move: state.move - horizontalMove,
-                style: { transform: `translateX(${state.move - horizontalMove}px)` }
+                style: { transform: `translateX(${state.move - horizontalMove}%)` }
             }
         })
     }

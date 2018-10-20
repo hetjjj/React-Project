@@ -21,7 +21,7 @@ class Footer extends Component {
     return (
       <div className="footer">
         <h3>Popular Framwork</h3>
-        <Carousel imgFiles={name} horizontalMove={1010} />
+        <Carousel imgFiles={name} horizontalMove={100} />
         <div>
           <ul>
             <li><a href="https://www.facebook.com/100004421854003">Facebook</a></li>
