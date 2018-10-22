@@ -9,19 +9,6 @@
     text-decoration: none;
 }
 
-.footer a:visited {
-    color: rgb(43, 37, 35);
-}
-
-.footer a:hover {
-    color: #40A4C8;
-    border-bottom: 1px solid black;
-}
-
-.footer a:active {
-    background-color: rgba(156, 240, 243, 0.993);
-}
-
 .footer a {
     margin: 6px;
 }

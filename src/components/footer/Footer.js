@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from '../../utility/Carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faLinkedin,faGithub } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 
 class Footer extends Component {
@@ -24,8 +26,9 @@ class Footer extends Component {
         <Carousel imgFiles={name} horizontalMove={100} />
         <div>
           <ul>
-            <li><a href="https://www.facebook.com/100004421854003">Facebook</a></li>
-            <li><a href="">Linkedin</a></li>
+            <li><a href="https://www.facebook.com/100004421854003"><FontAwesomeIcon icon={faFacebook} size="3x" color="blue"/></a></li>
+            <li><a href=""><FontAwesomeIcon icon={faLinkedin} size="3x" color="#0366d6"/></a></li>
+            <li><a href="https://github.com/hetjjj"><FontAwesomeIcon icon={faGithub} size="3x" color="#23BE52"/></a></li>
           </ul>
         </div>
       </div>

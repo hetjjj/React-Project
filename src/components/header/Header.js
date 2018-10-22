@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 class Header extends Component {
     render() {
         return (
             <div className="header">
-                <div style={{ float: 'right' }}>
-                    <Link to="">Home</Link>
-                    <Link to="introduction">Introduction</Link>
+                <div className="nav" style={{ float: 'right' }}>
+                    <NavLink to="/introduction">Introduction</NavLink>
+                    <NavLink to="/blog">Blog</NavLink>
                 </div>
-                <h1>Welcome to my website!</h1>
+                <h1><Link to="/">Welcome to my website!</Link></h1>
             </div>
         )
     }

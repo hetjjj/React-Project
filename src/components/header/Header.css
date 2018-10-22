@@ -2,19 +2,18 @@
     text-decoration: none;
 }
 
-.header a:visited {
-    color: rgb(43, 37, 35);
+.header .nav a:hover {
+    color: rgba(75, 201, 206, 0.993);
 }
 
-.header a:hover {
-    color: #40A4C8;
-    border-bottom: 1px solid black;
-}
-
-.header a:active {
-    background-color: rgba(156, 240, 243, 0.993);
+.header .nav a.active{
+    color: rgba(75, 201, 206, 0.993);
+    border-bottom: 1px solid rgba(75, 201, 206, 0.993);
 }
 
 .header a {
+    color: black;
     margin: 6px;
 }
+
+
