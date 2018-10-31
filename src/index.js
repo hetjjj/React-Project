@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './components/home/Home';
-import Introduction from './components/introduction/Introduction';
+import {renderRoutes} from 'react-router-config';
 import './index.css';
-import App from './components/App';
+import AppRootPage from './views/pages/AppRootPage';
 import registerServiceWorker from './registerServiceWorker';
+import Pages from './routing/routes/Pages';
 
 
-ReactDOM.render(
+ReactDOM.hydrate(
     <BrowserRouter>
-        <App>
-            <Route path="/" exact component={Home} />
-            <Route path="/introduction" component={Introduction}></Route>
-        </App>
+        <AppRootPage>
+            {renderRoutes(Pages)}
+        </AppRootPage>
     </BrowserRouter>,
     document.getElementById('root'));
 registerServiceWorker();

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Carousel.css';
+import classes from './Carousel.css';
 
 class Carousel extends Component {
     constructor(props) {
@@ -44,12 +44,12 @@ class Carousel extends Component {
         let displayLeftButton = this.state.index - 1 >= 0;
         let displayRightButton = this.state.index + 1 < length;
         return (
-            <div className="carousel">
-                <button onClick={this.onLeftClick} className={displayLeftButton ? "leftArrow" : "notVisible"}></button>
+            <div className={classes.carousel}>
+                <button onClick={this.onLeftClick} className={displayLeftButton ? classes.leftArrow : classes.notVisible}></button>
                 <ul style={this.state.style}>
                     {this.renderImages()}
                 </ul>
-                <button onClick={this.onRightClick} className={displayRightButton ? "rightArrow" : "notVisible"}></button>
+                <button onClick={this.onRightClick} className={displayRightButton ? classes.rightArrow : classes.notVisible}></button>
             </div>
         );
     }

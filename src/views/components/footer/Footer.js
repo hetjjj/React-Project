@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Carousel from '../../utility/Carousel';
+import Carousel from '../utility/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedin,faGithub } from '@fortawesome/free-brands-svg-icons';
-import './Footer.css';
+import classes from './Footer.css';
 
 class Footer extends Component {
   render() {
@@ -21,7 +21,7 @@ class Footer extends Component {
       </a>,
     ];
     return (
-      <div className="footer">
+      <div className={classes.footer}>
         <h3>Popular Framwork</h3>
         <Carousel imgFiles={name} horizontalMove={100} />
         <div>
