@@ -15,9 +15,9 @@
     "react-router-dom": "^4.3.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode=development --config webpack.client.js -w --progress --profile --color",
-    "build": "NODE_ENV=production webpack --mode=production --config webpack.client.js --progress --profile --color",
-    "node": "webpack --mode=development --config webpack.server.js -w --progress --profile --color & nodemon --watch build --exec \"node build/bundle.js\"",
+    "start": "webpack-dev-server --mode=development --config webpack.dev.js -w --progress --profile --color",
+    "build": "webpack --mode=production --config webpack.dev.js --progress --profile --color",
+    "node": "NODE_ENV=node webpack --mode=development --config webpack.dev.js -w & webpack --mode=development --config webpack.server.js -w --progress & nodemon --watch build --exec \"node build/bundle.js\"",
     "build:node": "webpack --mode=production --config webpack.server.js --progress --profile --color"
   },
   "devDependencies": {
