@@ -1,9 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-
     // Tell webpack the root file of our server application
     entry: './src/index.js',
 
@@ -33,7 +33,7 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
-                    {loader: MiniCssExtractPlugin.loader},
+                    { loader: MiniCssExtractPlugin.loader },
                     {
                         loader: 'css-loader',
                         options: {
@@ -49,13 +49,18 @@ module.exports = {
         historyApiFallback: true,
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: __dirname + '/src/index.html',
-            filename: 'index.html',
-            inject: 'body'
-        }),
         new MiniCssExtractPlugin({
             filename: "style.css"
         })
     ]
+}
+
+if (devMode) {
+    module.exports.plugins.push(
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/index.html',
+            filename: 'index.html',
+            inject: 'body'
+        })
+    )
 }
