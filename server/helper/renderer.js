@@ -2,7 +2,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
-import Pages from '../../routing/routes/Pages';
+import Pages from '../../src/routing/routes/Pages';
 import { Helmet } from 'react-helmet';
 
 export default (req, context) => {

@@ -30,8 +30,8 @@ class Header extends Component {
                     </nav>
                     <h1 style={{
                         display: "inline",
-                        "font-weight": "500",
-                        "margin-left": "15px"
+                        "fontWeight": "500",
+                        "marginLeft": "15px"
                     }}><Link to="/">Tangjie He</Link></h1>
                 </div>
             </div>
