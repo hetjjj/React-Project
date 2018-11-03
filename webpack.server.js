@@ -35,12 +35,24 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
-                    {loader: MiniCssExtractPlugin.loader},
+                    { loader: MiniCssExtractPlugin.loader },
                     {
                         loader: 'css-loader',
                         options: {
                             modules: true,
                             localIdentName: '[local]'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            outputPath: ''
                         }
                     }
                 ]

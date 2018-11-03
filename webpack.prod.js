@@ -40,7 +40,25 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192
+                        }
+                    },
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            outputPath: ''
+                        }
+                    }
+                ]
+            },
         ]
     },
     plugins: [

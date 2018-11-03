@@ -1,3 +1,29 @@
+.container {
+    background-image: url('../../../assets/images/header-bg.jpg');
+    background-size: 100% 600px;
+    height: 600px;
+}
+
+.header {
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    padding: 10px;
+    vertical-align: text-top;
+}
+
+.headerScrolled {
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    padding: 10px;
+}
+
+.header .nav {
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
 .header a:link {
     text-decoration: none;
 }
@@ -12,8 +38,6 @@
 }
 
 .header a {
-    color: black;
+    color: white;
     margin: 6px;
 }
-
-

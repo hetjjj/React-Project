@@ -13,6 +13,11 @@
     margin: 6px;
 }
 
+.footer .links {
+    text-align: center;
+    width: 100%;
+    background: #434343;
+}
 
 .footer li {
     display: inline-block;

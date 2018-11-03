@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
-    width: 60%;
+    width: 800px;
     min-width: 300px;
     white-space: nowrap; 
 }
@@ -19,11 +19,11 @@
 }
 
 .leftArrow {
-    left: 7%;
+    left: 1%;
 }
 
 .rightArrow {
-    right: 6%;
+    right: 0%;
 }
 
 .notVisible {
@@ -48,25 +48,15 @@
 
 .carousel li {
     vertical-align: top;
-    margin: 40px;
     list-style-type: none;
     display: inline-block; 
 }
 
 .carousel img {
+    margin: 15px;
     box-shadow: 5px 10px 15px grey;
-    width: 100%;
+    width: 800px;
     height: 325px;
-}
-
-@media all and (max-width: 500px) {
-    .leftArrow {
-        left: 9%;
-    }
-    
-    .rightArrow {
-        right: 4%;
-    }
 }
 
 
