@@ -2,6 +2,7 @@ import AppRootPage from '../../views/pages/AppRootPage';
 import HomePage from '../../views/pages/HomePage';
 import IntroductionPage from '../../views/pages/IntroductionPage';
 import NotFoundPage from '../../views/pages/NotFoundPage';
+import { BlogPage } from '../../views/components/hoc/AsyncComponent';
 
 export default [
     {
@@ -15,6 +16,10 @@ export default [
             {
                 path: '/introduction',
                 component: IntroductionPage
+            },
+            {
+                path: '/blog',
+                component: BlogPage
             },
             {
                 component: NotFoundPage

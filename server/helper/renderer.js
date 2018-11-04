@@ -4,13 +4,16 @@ import { StaticRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import Pages from '../../src/routing/routes/Pages';
 import { Helmet } from 'react-helmet';
+import Loadable from 'react-loadable';
 
 export default (req, context) => {
-
+    let modules = [];
     const content = renderToString(
-        <StaticRouter location={req.path} context={context}>
-            {renderRoutes(Pages)}
-        </StaticRouter >
+        <Loadable.Capture report={moduleName => modules.push(moduleName)}>
+            <StaticRouter location={req.path} context={context}>
+                {renderRoutes(Pages)}
+            </StaticRouter >
+        </Loadable.Capture>
     );
 
     const helmet = Helmet.renderStatic();
@@ -27,7 +30,7 @@ export default (req, context) => {
     </head>
     <body>
         <div id="root">${content}</div>
-        <script src="bundle.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
     `;

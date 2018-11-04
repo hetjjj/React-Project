@@ -9,9 +9,6 @@
     text-decoration: none;
 }
 
-.footer a {
-    margin: 6px;
-}
 
 .footer .links {
     text-align: center;
@@ -21,4 +18,17 @@
 
 .footer li {
     display: inline-block;
+}
+
+.footer .icon {
+    padding: 0px;
+}
+
+.footer .icon li{
+    margin: 6px;
+}
+
+.footer .infoText {
+    color: white;
+    margin: 20px;
 }

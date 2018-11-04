@@ -21,6 +21,7 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 options: {
+                    plugins: ["@babel/syntax-dynamic-import", "@babel/plugin-proposal-class-properties"],
                     presets: [
                         '@babel/preset-react',
                         '@babel/preset-env'

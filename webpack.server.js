@@ -1,8 +1,11 @@
 const path = require('path')
 const webpackNodeEexternals = require('webpack-node-externals');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { ReactLoadablePlugin } = require('react-loadable/webpack');
 
 module.exports = {
+    devServer: {
+        hot: true
+    },
     // Inform wepack that we're building a bundle 
     // for nodeJS, rather than for the browser
     target: 'node',
@@ -25,9 +28,11 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 options: {
+                    plugins: ["@babel/plugin-syntax-dynamic-import", "@babel/plugin-proposal-class-properties",
+                        "react-loadable/babel"],
                     presets: [
-                        '@babel/preset-react',
-                        '@babel/preset-env'
+                        "@babel/preset-react",
+                        "@babel/preset-env"
                     ]
                 }
             },
@@ -35,9 +40,8 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
-                    { loader: MiniCssExtractPlugin.loader },
                     {
-                        loader: 'css-loader',
+                        loader: 'css-loader/locals',
                         options: {
                             modules: true,
                             localIdentName: '[local]'
@@ -59,10 +63,5 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: "style.css"
-        })
-    ],
     externals: [webpackNodeEexternals()]
 }
